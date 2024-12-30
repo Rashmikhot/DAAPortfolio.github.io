@@ -134,6 +134,19 @@
                     <li>Greedy Scheduling: The program attempts to assign each course to the earliest available time slot and room, ensuring the room can accommodate the students, and the instructor is available.</li>
                     <li>Scheduling Outcome: The course schedule is printed, showing the assigned room and time slot.</li>
                  </ul>
+            <h5>Algorithm</h5>
+            <pre>function greedyActivitySelection(activities):
+    sort activities by finish time
+    selected = [activities[0]]  // Select the first activity
+    lastFinish = activities[0].finish
+
+    for i = 1 to n-1:
+        if activities[i].start >= lastFinish:
+            selected.append(activities[i])
+            lastFinish = activities[i].finish
+
+    return selected
+</pre>
                 <h5>Code Implementation:</h5>
                 <img src="img/code1.png" alt="A description of the image" width="600" height="500" />
                 <img src="img/code2.png" alt="A description of the image" width="600" height="500" />
